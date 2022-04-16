@@ -27,13 +27,12 @@ _CFLAGS =  -Wno-comma                         \
 			-Wno-weak-vtables                  \
 			-Wno-padded                        \
 			-Wno-double-promotion              \
-			-Wno-c++98-compat-pedantic         \
-			-Wno-c++11-compat-pedantic         \
-			-Wno-c++14-compat-pedantic         \
-			-Wno-c++17-compat-pedantic         \
 											   \
 			-Wno-zero-as-null-pointer-constant \
 			-lboost_serialization \
+			-lserved \
+			-lpthread \
+			-std=c++17 \
 			-Wno-ctad-maybe-unsupported        
 
 #_CFLAGS = -Wall -Wextra -pedantic#             # Compilation flags

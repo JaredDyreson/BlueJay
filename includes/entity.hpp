@@ -16,7 +16,6 @@ struct Entity {
     Entity(Archive&);
 
     Entity(){};
-    ~Entity(){ std::cout << "calling destructor" << std::endl; }
     Entity(int);
 
     int x;
