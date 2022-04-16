@@ -13,11 +13,9 @@
 
 int main() {
 
-    Server server("localhost", "8080");
-
-    server.run(10);
-    //Connection conn = Connection("localhost", "6379");
-    //conn.set_value("hello", "world");
+    Connection conn = Connection("localhost", "80");
+    conn.set_value("hello", "world");
+    conn.dump();
     //const Entity value = Entity(100);
     // std::istringstream iss{search};
     // boost::archive::text_iarchive ia{iss};

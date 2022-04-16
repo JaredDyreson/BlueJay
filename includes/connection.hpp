@@ -11,6 +11,7 @@ class Connection {
     inline auto execute(TArgs&&...);
     void set_value(std::string, std::string);
     std::string get(std::string);
+    void dump();
 
    private:
     std::shared_ptr<std::iostream> _stream;

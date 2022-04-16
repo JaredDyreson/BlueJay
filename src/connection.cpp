@@ -20,3 +20,7 @@ void Connection::set_value(std::string key, std::string value) {
 std::string Connection::get(std::string key) {
     return this->execute("get", key).as<std::string>();
 }
+
+void Connection::dump() {
+    this->execute("SAVE");
+}
