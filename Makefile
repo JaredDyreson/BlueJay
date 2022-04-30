@@ -17,7 +17,7 @@ _HDIR   = includes#                             # Path to directory of header fi
 _BDIR   = bin#                                 # Path to directory of binary files (relative to ./)
 _SSUF   = cpp#                                 # Suffix of source files
 _HSUF   = hpp#                                 # Suffix of header files
-_CC     = g++#                                 # Compiler to be used
+_CC     = clang++#                                 # Compiler to be used
 _CFLAGS =  -Wno-comma                         \
 			-Wno-unused-template               \
 			-Wno-sign-conversion               \

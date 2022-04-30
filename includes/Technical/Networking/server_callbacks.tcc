@@ -1,4 +1,4 @@
-void pos::server_callbacks::login_handler(served::response& res,
+void BlueJay::Technical::server_callbacks::login_handler(served::response& res,
                                           const served::request& req) {
    if (req.header("Content-Type") != "application/json") {
       served::response::stock_reply(400, res);

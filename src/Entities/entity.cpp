@@ -1,7 +1,9 @@
-#include "../includes/entity.hpp"
+#include "../../includes/Entities/entity.hpp"
 #include <iomanip>
 #include <iostream>
 #include <sstream>
+
+using namespace BlueJay::Entities;
 
 template <class Archive>
 void Entity::serialize(Archive& ar, const unsigned int version) {
@@ -23,19 +25,8 @@ std::string Entity::as_string() const {
     oa << this;
     return ss.str();
 }
-std::shared_ptr<Entity> example(std::string search) {
+std::shared_ptr<Entity> entity_constructor_wrapper(std::string search) {
     std::istringstream iss{search};
     boost::archive::text_iarchive ia{iss};
     return std::shared_ptr<Entity>(new Entity(ia));
 }
-
-// Entity to_entity(std::string search) {
-// Entity restored;
-//{
-// std::istringstream iss{search};
-// boost::archive::text_iarchive ia{iss};
-// ia >> restored;
-//}
-
-// return restored;
-//}
