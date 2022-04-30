@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+REDIS_USERNAME_DB="$(sudo docker ps -a | awk '/redis/ {print $1}')"
+# Enable: sudo docker start "$REDIS_USERNAME_DB"
+
+echo "$REDIS_USERNAME_DB"
