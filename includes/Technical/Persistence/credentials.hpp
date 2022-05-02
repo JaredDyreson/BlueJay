@@ -1,5 +1,6 @@
 #pragma once
 
+#include <array>
 #include <string>
 
 namespace BlueJay::Technical::Persistence {
@@ -14,6 +15,8 @@ namespace BlueJay::Technical::Persistence {
       std::string getUserName() const;
       std::string getPassword() const;
       Role getRole() const;
+
+      bool operator==(std::array<std::string, 2>);
 
      private:
       std::string _username;
